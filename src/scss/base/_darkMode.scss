@@ -1,0 +1,41 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.dark-mode {
+
+    li {
+        color: v.$blanco;
+    }
+
+    .header {
+        background-color: v.$grisOscuro-d-m;
+        @include m.transition-bg;
+        h1,h2 {
+            color: v.$blanco;
+        }
+    }
+
+    background-color: v.$grisOscuro-d-m;
+    @include m.transition-bg;
+    border-bottom: 1px solid v.$negro;
+
+    p, span {
+        color: v.$blanco;
+        @include m.transition-color;
+    }
+
+    a, h1,h2,h3,h4  {
+        color: v.$gris-d-m;
+        @include m.transition-color;
+    }
+
+    .parte-derecha {
+        background-color:v.$graybg-d-m;
+        @include m.transition-bg;
+
+        i.fa-gear, i.fa-users{
+            filter: invert(100%);
+        }
+    }
+
+}

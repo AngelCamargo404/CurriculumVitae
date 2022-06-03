@@ -1,0 +1,2 @@
+function darkMode(){const d=window.matchMedia("(prefers-color-scheme: dark)");d.matches?document.body.classList.add("dark-mode"):document.body.classList.remove("dark-mode"),d.addEventListener("change",(function(){d.matches?document.body.classList.add("dark-mode"):document.body.classList.remove("dark-mode")}));document.querySelector(".dark-mode-boton").addEventListener("click",(function(){document.body.classList.toggle("dark-mode")}))}document.addEventListener("DOMContentLoaded",(function(){darkMode()}));
+//# sourceMappingURL=index.js.map

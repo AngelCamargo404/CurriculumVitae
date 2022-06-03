@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-main {
+    
+    @include m.max-tablet{
+        text-align: justify;
+        
+        p{
+            font-size: 1.6rem;
+        }
+        h3{
+            font-size: 2.4rem;
+        }
+        h4{
+            font-size: 1.8rem;
+        }
+    }
+
+    @include m.tablet{
+        @include m.grid-66-33(2fr, 1fr, 4rem);
+        margin-right:0;
+    }
+}
+
+.parte-izquierda {
+
+    p {
+        margin: 1rem 0;
+    }
+
+    h4{ 
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+}
+
+.contenido-exp, .contenido-cert{
+    @include m.tablet{
+        @include m.grid-66-33(1fr, 2fr, 1rem);
+        align-items: left;
+
+    }
+}
+
+.parte-derecha {
+    background-color: v.$graybg;
+    @include m.transition-bg;
+    padding: 2rem;
+
+    @include m.max-tablet {
+        border-radius: 1rem;    
+        margin-bottom: 1rem;
+    }
+
+    li {
+        @include m.resetear-lista;
+        margin: 1rem 0;
+        color: v.$gris;
+    }
+
+    li p {
+        font-size: 1.5rem;
+    }
+
+    li i{
+        padding-right: 1rem;
+    }
+
+}
+
+i {
+
+    color: v.$negro;
+
+    &.fa-brain {
+        color:v.$brain;
+        @include m.transition-color;
+    }
+    &.fa-bullhorn{
+        color:v.$blue;
+        @include m.transition-color;
+    }
+}
+
+.contenido-app {
+    img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    @include m.grid(2, 1rem);
+        align-items: center;
+}
