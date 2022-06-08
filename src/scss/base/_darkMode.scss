@@ -8,8 +8,6 @@
     }
 
     .header {
-        background-color: v.$grisOscuro-d-m;
-        @include m.transition-bg;
         h1,h2 {
             color: v.$blanco;
         }
